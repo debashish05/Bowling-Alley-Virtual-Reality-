@@ -12,14 +12,14 @@ public class GameMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!menu.activeSelf)
-            {
-                menu.SetActive(true);
-            }
-            else
-            {
-                menu.SetActive(false);
-            }
+            // if (!menu.activeSelf)
+            // {
+            //     menu.SetActive(true);
+            // }
+            // else
+            // {
+            //     menu.SetActive(false);
+            // }
         }
     }
 

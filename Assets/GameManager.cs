@@ -58,40 +58,6 @@ public class GameManager : MonoBehaviour
 
         }
 
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    ResetPins();
-        //    turns++;
-
-        //    //counter.counter = counter.counter + 1;
-        //    Debug.Log(counter.counter);
-
-        //    if(turns == 10)
-        //    {
-        //        scores.PlayerScore[counter.counter % 10] = score;
-        //        counter.counter = counter.counter + 1;
-        //    }
-
-        //    //for (int i = 0; i < scores.PlayerScore.Length; i++)
-        //    //{
-        //    //    if(scores.PlayerScore[i] == 0)
-        //    //    {
-        //    //        scores.PlayerScore[i] = score;
-        //    //        flag = true;
-        //    //        break;
-        //    //    }
-        //    //    //Debug.Log(scores.PlayerScore[i]);
-        //    //}
-        //}
-
-
-        //if(turns == 10 && flag)
-        //{
-        //    scores.PlayerScore[counter.counter % 10] = score;
-        //    counter.counter = counter.counter + 1;
-        //    Debug.Log(counter.counter);
-        //    flag = false;
-        //}
 
         if (turns >= 10)
         {
