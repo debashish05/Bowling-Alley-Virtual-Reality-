@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -34,7 +35,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveBall();
+        //MoveBall();
 
         //Debug.Log(turns);
         //ball.transform.position.z > 4.25 ||
@@ -50,14 +51,53 @@ public class GameManager : MonoBehaviour
 
             if (turns == 9)
             {
-                scores.PlayerScore[counter.counter % 10] = score;
-                counter.counter = counter.counter + 1;
+                if(scores.PlayerScore[9] < score)
+                {
+                    scores.PlayerScore[9] = score;
+                    counter.counter = counter.counter + 1;
+                }
+                Array.Sort(scores.PlayerScore);
+                Array.Reverse(scores.PlayerScore);
             }
 
             turns++;
 
         }
 
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    ResetPins();
+        //    turns++;
+
+        //    //counter.counter = counter.counter + 1;
+        //    Debug.Log(counter.counter);
+
+        //    if(turns == 10)
+        //    {
+        //        scores.PlayerScore[counter.counter % 10] = score;
+        //        counter.counter = counter.counter + 1;
+        //    }
+
+        //    //for (int i = 0; i < scores.PlayerScore.Length; i++)
+        //    //{
+        //    //    if(scores.PlayerScore[i] == 0)
+        //    //    {
+        //    //        scores.PlayerScore[i] = score;
+        //    //        flag = true;
+        //    //        break;
+        //    //    }
+        //    //    //Debug.Log(scores.PlayerScore[i]);
+        //    //}
+        //}
+
+
+        //if(turns == 10 && flag)
+        //{
+        //    scores.PlayerScore[counter.counter % 10] = score;
+        //    counter.counter = counter.counter + 1;
+        //    Debug.Log(counter.counter);
+        //    flag = false;
+        //}
 
         if (turns >= 10)
         {
@@ -69,10 +109,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void MoveBall()
-    {
-        ball.transform.Translate(Vector3.right * Input.GetAxis("Horizontal") * Time.deltaTime);
-    }
+    //void MoveBall()
+    //{
+    //    ball.transform.Translate(Vector3.right * Input.GetAxis("Horizontal") * Time.deltaTime);
+    //}
 
     void CountPinsDown()
     {
