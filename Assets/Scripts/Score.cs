@@ -6,5 +6,10 @@ using UnityEngine;
 public class Score : ScriptableObject
 {
     public int[] PlayerScore = new int[10];
+
+    private void OnEnable()
+    {
+        hideFlags = HideFlags.DontUnloadUnusedAsset;
+    }
 }
 

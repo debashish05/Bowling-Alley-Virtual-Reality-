@@ -6,4 +6,8 @@ using UnityEngine;
 public class HighScores : ScriptableObject
 {
     public int highScore;
+    private void OnEnable()
+    {
+        hideFlags = HideFlags.DontUnloadUnusedAsset;
+    }
 }

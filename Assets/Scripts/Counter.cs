@@ -7,4 +7,9 @@ public class Counter : ScriptableObject
 {
     public int counter;
 
+    private void OnEnable()
+    {
+        hideFlags = HideFlags.DontUnloadUnusedAsset;
+    }
+
 }
